@@ -9,6 +9,7 @@ public class BulletMove : MonoBehaviour
     [SerializeField] private string groundTag = "Ground";
     [SerializeField] private string targetTag = "Enemy";
     [SerializeField] private float maxflayingtime;
+
     float flayingtime = 0;
 
     void Start()

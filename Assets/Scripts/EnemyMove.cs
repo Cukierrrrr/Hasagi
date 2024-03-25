@@ -12,9 +12,11 @@ public class EnemyMove : MonoBehaviour
     [SerializeField] private EnemySeen enemySeenLeft;
     [SerializeField] private EnemySeen enemySeenRight;
     [SerializeField] private EnemySeen Range;//tutaj przypisujemy Range++
+
     private Vector3 direction;
     BoxCollider2D visionLeft;
     BoxCollider2D visionRight;
+
     private void Awake()
     {
         visionRight = enemySeenRight.GetComponent<BoxCollider2D>();

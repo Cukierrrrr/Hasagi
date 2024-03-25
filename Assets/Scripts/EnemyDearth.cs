@@ -59,7 +59,7 @@ public class EnemyDearth : MonoBehaviour
         if (dead)
         {
             timer2 += Time.deltaTime;
-            if(timer2 >= 0.58)
+            if(timer2 >= 1.11)
             {
                 Destroy(gameObject);//usuniêcie przeciwnika po odegraniu animacji œmierci
             }

@@ -8,19 +8,23 @@ public class EnemyAtack: MonoBehaviour
 {
     [SerializeField] private EnemySeen Range;//tutaj przypisujemy Range
     [SerializeField] private Animator animator;
+
     string currentAnimation = "MeleeEnemyStanding";
     float animationTime = 1.4f / 1.5f;
     float cooldown = 0f;
     int swordphase = 0;
+
     Sword sword;
     BoxCollider2D swordColider;
     Transform swordTransform;
+
     private void Awake()
     {
         sword = gameObject.transform.GetChild(5).gameObject.GetComponent<Sword>();
         swordColider = gameObject.transform.GetChild(5).gameObject.GetComponent<BoxCollider2D>();
         swordTransform = gameObject.transform.GetChild(5).gameObject.GetComponent<Transform>();
     }
+
     void Update()
     {
         if (cooldown == 0 && Range.IsSeen() && !GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerDeath>().isPlayerDead() && !gameObject.GetComponent<EnemyDearth>().isDead())//rozpoczêcie ataku jeœli gracz jest w zasiêgu
