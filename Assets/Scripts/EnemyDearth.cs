@@ -14,7 +14,7 @@ public class EnemyDearth : MonoBehaviour
     [SerializeField] private Sprite health2of3;
     [SerializeField] private Sprite health1of3;
     [SerializeField] private Sprite health1of2;
-
+    [SerializeField] private BoxCollider2D collider;
     private int health;
     private bool toranaded = false;
     private float timer = 0;
@@ -55,6 +55,9 @@ public class EnemyDearth : MonoBehaviour
             aniamtor.Play("Smoke");
             dead = true;
             Destroy(healthBar);
+            collider.isTrigger = true;
+            rigidbody.gravityScale = 0;
+            rigidbody.velocity = new Vector2(0, 0);
         }
         if (dead)
         {

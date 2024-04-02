@@ -619,6 +619,7 @@ MonoBehaviour:
   health2of3: {fileID: 21300000, guid: 5dc2bcbf0240f6d4a9eace63481a2693, type: 3}
   health1of3: {fileID: 21300000, guid: f2cfa8c713ecb9d4fbb315b2bd25431e, type: 3}
   health1of2: {fileID: 21300000, guid: d4bcebb27e143f641beb598386a3f37c, type: 3}
+  collider: {fileID: 121255766300466189}
 --- !u!95 &2798881903135289399
 Animator:
   serializedVersion: 5
